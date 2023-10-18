@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pose Generator</title>
+    <script>
+        function loadImage() {
+            var image = new Image();
+            var baseStr64 = document.getElementById("hiddenstring").value;      
+            poseImage.setAttribute('src', "data:image/jpg;base64," + baseStr64);
+        }
+
+        function callAPI(){
+            document.formprompt.submit();
+        }
+
+        function callAPIOS(){
+            alert("This app is open sourced. Feel free to implement this method!");
+        }
+</script>
+</head>
+
+<form id="imageform1" name="imageform1" th:action="@{/}" th:object="${prompt}" method="get">
+<h1>Imagen API</h1>  <input type="submit" value="Back" onClick="callAPI();" /> 
+ <input type="button" value="Save pose image to database" onClick="callAPIOS();" /> 
+ <input type="button" value="Upload an image" onClick="callAPIOS();" /> 
+<input id="hiddenstring" class="form-control" type="hidden" th:value="${imagestring}" >
+</form> 
+
+<form id="imageform" name="imageform" >
+<body onLoad="loadImage();">
+<div>
+<img id="poseImage" name="poseImage" width="500" height="500">
+</div>
+</body>
+</html>
+
+<!--
+    style="border:1px solid black;"
+<span id="source" style="display:none">
+${imagestring}
+</span> -->

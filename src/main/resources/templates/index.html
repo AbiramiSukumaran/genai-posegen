@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pose Generator</title>
+<script>
+    function callAPI(){
+            var pose = document.getElementById("dropDownList").value;
+            var custom = document.getElementById("promptText").value;
+            if(custom == ""){
+                document.getElementById("hiddenprompt").value = "";
+                document.getElementById("hiddenprompt").value = pose;
+            }
+            else{
+                document.getElementById("hiddenprompt").value = custom;
+            }
+            document.formprompt.submit();
+        }
+</script>
+</head>
+<body>
+<form id="formprompt" name="formprompt" style="border:1px solid black;" action="#" th:action="@{/getimage}" th:object="${prompt}" method="get">
+<center>
+    <h1>AI-Powered Pose Generator</h1>
+
+<BR/>
+<BR/>
+
+<p>
+<B>Select a pose:</B> </p>
+<p>
+<select id="dropDownList" class="form-control" style="width: 830px; border-radius: 20px; padding: 10px; ">
+     <option value = "0" selected> None </option>
+    <option th:each="p : ${poselist}" th:value="${p}" th:text="${p}"></option>     
+</select>
+</p>
+
+<p><B>
+Enter prompt: </B>
+</p>
+
+<p>
+<input type="text" id="promptText" name="promptText" style="width: 800px; border-radius: 18px; padding: 10px; ">
+<input type="hidden" th:field="*{prompt}"  id="hiddenprompt" >
+</p>
+
+
+
+<BR/>
+<p>
+<input type="submit" value="Generate Image" onClick="callAPI();" /> 
+</p>
+</form>
+
+   </center>
+</body>
+</html>
