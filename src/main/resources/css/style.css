@@ -1,3 +1,6 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #424242;
@@ -5,5 +8,37 @@ body {
 }
 #formprompt {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#formprompt .field {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+#formprompt .submitField {
+    text-align: center;
+}
+#formprompt .field label {
+    display: block;
+    margin: 0 0 5px;
+}
+#formprompt .field select,
+#formprompt .field textarea {
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+    padding: 10px;
+}
+#formprompt .field textarea{
+    resize: vertical;
+}
+#formprompt .submitBtn{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #712cf9;
+    color:#fff;
+    border:none;
+    padding:10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }

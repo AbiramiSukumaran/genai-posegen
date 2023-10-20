@@ -27,18 +27,24 @@
     <h1>AI-Powered Pose Generator</h1>
     <div class="field">
         <label for="poseList">Select a pose:</label>
-        <select id="poseList" class="form-control" style="width: 830px; border-radius: 20px; padding: 10px; ">
+        <select id="poseList" class="form-control">
             <option value = "0" selected> None </option>
-           <option th:each="p : ${poselist}" th:value="${p}" th:text="${p}"></option>     
+            <!-- TODO: Remove these static values -->
+            <option value = "0"> STAND </option>
+            <option value = "0"> PLANK </option>
+            <option value = "0"> SIT </option>
+            <option value = "0"> BEND </option>
+            <option value = "0"> PUSHUP </option>
+           <!-- <option th:each="p : ${poselist}" th:value="${p}" th:text="${p}"></option>      -->
        </select>
     </div>
     <div class="field">
         <label for="promptText">Enter prompt:</label>
-        <input type="text" id="promptText" name="promptText" style="width: 800px; border-radius: 18px; padding: 10px; ">
+        <textarea id="promptText" name="promptText"></textarea>
         <input type="hidden" th:field="*{prompt}"  id="hiddenprompt" >
     </div>
-    <div class="field">
-        <input type="submit" value="Generate Image" onClick="callAPI();" />     
+    <div class="field submitField">
+        <input class="submitBtn" type="submit" value="Generate Image" onClick="callAPI();" />     
     </div>
 </form>
 </body>
