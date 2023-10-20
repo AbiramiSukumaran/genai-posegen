@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Pose Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
 <script>
     function callAPI(){
-            var pose = document.getElementById("dropDownList").value;
+            var pose = document.getElementById("poseList").value;
             var custom = document.getElementById("promptText").value;
             if(custom == ""){
                 document.getElementById("hiddenprompt").value = "";
@@ -19,39 +23,23 @@
 </script>
 </head>
 <body>
-<form id="formprompt" name="formprompt" style="border:1px solid black;" action="#" th:action="@{/getimage}" th:object="${prompt}" method="get">
-<center>
+<form id="formprompt" name="formprompt" action="#" th:action="@{/getimage}" th:object="${prompt}" method="get">
     <h1>AI-Powered Pose Generator</h1>
-
-<BR/>
-<BR/>
-
-<p>
-<B>Select a pose:</B> </p>
-<p>
-<select id="dropDownList" class="form-control" style="width: 830px; border-radius: 20px; padding: 10px; ">
-     <option value = "0" selected> None </option>
-    <option th:each="p : ${poselist}" th:value="${p}" th:text="${p}"></option>     
-</select>
-</p>
-
-<p><B>
-Enter prompt: </B>
-</p>
-
-<p>
-<input type="text" id="promptText" name="promptText" style="width: 800px; border-radius: 18px; padding: 10px; ">
-<input type="hidden" th:field="*{prompt}"  id="hiddenprompt" >
-</p>
-
-
-
-<BR/>
-<p>
-<input type="submit" value="Generate Image" onClick="callAPI();" /> 
-</p>
+    <div class="field">
+        <label for="poseList">Select a pose:</label>
+        <select id="poseList" class="form-control" style="width: 830px; border-radius: 20px; padding: 10px; ">
+            <option value = "0" selected> None </option>
+           <option th:each="p : ${poselist}" th:value="${p}" th:text="${p}"></option>     
+       </select>
+    </div>
+    <div class="field">
+        <label for="promptText">Enter prompt:</label>
+        <input type="text" id="promptText" name="promptText" style="width: 800px; border-radius: 18px; padding: 10px; ">
+        <input type="hidden" th:field="*{prompt}"  id="hiddenprompt" >
+    </div>
+    <div class="field">
+        <input type="submit" value="Generate Image" onClick="callAPI();" />     
+    </div>
 </form>
-
-   </center>
 </body>
 </html>

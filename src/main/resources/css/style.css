@@ -1,0 +1,9 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #424242;
+    color: #fff;
+}
+#formprompt {
+    display: flex;
+    justify-content: center;
+}
