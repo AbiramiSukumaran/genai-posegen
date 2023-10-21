@@ -56,8 +56,8 @@ body {
 }
 #slider {
     width: 400px;
-    height: 600px;
-    background: url('/images/yoga-1.jpg') no-repeat;
+    height: 400px;
+    background: url('/images/yoga-1.jpeg') no-repeat;
     background-position: center;
     background-size: contain;
     animation: slider 30s infinite;
@@ -66,77 +66,56 @@ body {
 @keyframes slider {
     0% {
         opacity: 1;
-        background-image: url('/images/yoga-1.jpg');
+        background-image: url('/images/yoga-1.jpeg');
     }
     10% {
         opacity: 0;
-        background-image: url('/images/yoga-1.jpg');
+        background-image: url('/images/yoga-1.jpeg');
     }
     11% {
-        background-image: url('/images/yoga-2.jpg');
+        background-image: url('/images/yoga-2.jpeg');
     }
     20% {
         opacity: 1;
     }
     30% {
         opacity: 0;
-        background-image: url('/images/yoga-2.jpg');
+        background-image: url('/images/yoga-2.jpeg');
     }
     31% {
-        background-image: url('/images/yoga-3.jpg');
+        background-image: url('/images/yoga-3.jpeg');
     }
     40% {
         opacity: 1;
     }
     50% {
         opacity: 0;
-        background-image: url('/images/yoga-3.jpg');
+        background-image: url('/images/yoga-3.jpeg');
     }
     51% {
-        background-image: url('/images/yoga-4.jpg');
+        background-image: url('/images/yoga-4.jpeg');
     }
     60% {
         opacity: 1;
     }
     70% {
         opacity: 0;
-        background-image: url('/images/yoga-4.jpg');
+        background-image: url('/images/yoga-4.jpeg');
     }
     71% {
-        background-image: url('/images/yoga-5.jpg');
+        background-image: url('/images/yoga-5.jpeg');
     }
     80% {
         opacity: 1;
     }
     90% {
         opacity: 0;
-        background-image: url('/images/yoga-5.jpg');
+        background-image: url('/images/yoga-5.jpeg');
     }
     91% {
-        background-image: url('/images/yoga-1.jpg');
+        background-image: url('/images/yoga-1.jpeg');
     }
     100% {
         opacity: 1;
     }
-    /* 30% {
-        opacity: 0;
-        background-image: url('/images/yoga-3.jpg');
-    }
-    40% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-        background-image: url('/images/yoga-4.jpg');
-    }
-    60% {
-        opacity: 1;
-    }
-    70% {
-        opacity: 0;
-        background-image: url('/images/yoga-5.jpg');
-    }
-    80% {
-        opacity: 1;
-    } */
 }
