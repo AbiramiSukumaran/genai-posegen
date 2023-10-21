@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="/css/style.css" />
 <script>
     function callAPI(){
@@ -45,7 +46,12 @@
         <input type="hidden" th:field="*{prompt}"  id="hiddenprompt" >
     </div>
     <div class="field submitField">
-        <input class="submitBtn" type="submit" value="Generate Image" onClick="callAPI();" />     
+        <button class="submitBtn" onClick="callAPI();">
+            Generate Image
+            <span class="icon material-symbols-outlined">
+                send
+            </span>
+        </button>   
     </div>
 </form>
 </body>

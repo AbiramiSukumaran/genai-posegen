@@ -6,6 +6,13 @@ body {
     background-color: #424242;
     color: #fff;
 }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 #formprompt {
     display: flex;
     flex-direction: column;
@@ -34,6 +41,8 @@ body {
     resize: vertical;
 }
 #formprompt .submitBtn{
+    display: inline-flex;
+    align-items: center;
     font-family: 'Open Sans', sans-serif;
     background-color: #712cf9;
     color:#fff;
@@ -41,6 +50,9 @@ body {
     padding:10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+#formprompt .submitBtn > .icon {
+    margin-left:10px;
 }
 #slider {
     width: 400px;
