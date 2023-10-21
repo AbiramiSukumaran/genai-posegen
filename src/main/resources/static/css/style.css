@@ -51,6 +51,9 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+#formprompt .submitBtn:hover {
+    box-shadow: 0 0 10px #3e00b8;
+}
 #formprompt .submitBtn > .icon {
     margin-left:10px;
 }
