@@ -42,3 +42,89 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+#slider {
+    width: 400px;
+    height: 600px;
+    background: url('/images/yoga-1.jpg') no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: slider 30s infinite;
+}
+
+@keyframes slider {
+    0% {
+        opacity: 1;
+        background-image: url('/images/yoga-1.jpg');
+    }
+    10% {
+        opacity: 0;
+        background-image: url('/images/yoga-1.jpg');
+    }
+    11% {
+        background-image: url('/images/yoga-2.jpg');
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+        background-image: url('/images/yoga-2.jpg');
+    }
+    31% {
+        background-image: url('/images/yoga-3.jpg');
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        background-image: url('/images/yoga-3.jpg');
+    }
+    51% {
+        background-image: url('/images/yoga-4.jpg');
+    }
+    60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+        background-image: url('/images/yoga-4.jpg');
+    }
+    71% {
+        background-image: url('/images/yoga-5.jpg');
+    }
+    80% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+        background-image: url('/images/yoga-5.jpg');
+    }
+    91% {
+        background-image: url('/images/yoga-1.jpg');
+    }
+    100% {
+        opacity: 1;
+    }
+    /* 30% {
+        opacity: 0;
+        background-image: url('/images/yoga-3.jpg');
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        background-image: url('/images/yoga-4.jpg');
+    }
+    60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+        background-image: url('/images/yoga-5.jpg');
+    }
+    80% {
+        opacity: 1;
+    } */
+}
