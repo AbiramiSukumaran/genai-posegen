@@ -7,11 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
-    <script type="text/javascript" th:src="@{/js/index.js}"></script>
+    <!-- <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <script type="text/javascript" th:src="@{/js/index.js}"></script> -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script type="text/javascript" src="/static/js/index.js"></script>
 </head>
 <body>
-<form id="formprompt" name="formprompt" action="#" th:action="@{/getimage}" th:object="${prompt}" method="get">
+<form id="formprompt" class="container" name="formprompt" action="#" th:action="@{/getimage}" th:object="${prompt}" method="get">
     <h1>
         <span class="material-symbols-outlined">
         self_improvement
@@ -30,10 +32,10 @@
         <textarea id="promptText" name="promptText"></textarea>
         <input type="hidden" th:field="*{prompt}"  id="hiddenprompt" >
     </div>
-    <div class="field submitField">
-        <button class="submitBtn" th:onclick="callAPI()">
+    <div class="field submitField text-center">
+        <button class="submitBtn btn" th:onclick="callAPI()">
             Generate Image
-            <span class="icon material-symbols-outlined">
+            <span class="icon-right material-symbols-outlined">
                 send
             </span>
         </button>   

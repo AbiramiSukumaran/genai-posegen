@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Pose Generator</title>
-    <script>
-        function loadImage() {
-            var image = new Image();
-            var baseStr64 = document.getElementById("hiddenstring").value;      
-            poseImage.setAttribute('src', "data:image/jpg;base64," + baseStr64);
-        }
-
-        function callAPI(){
-            document.formprompt.submit();
-        }
-
-        function callAPIOS(){
-            alert("This app is open sourced. Feel free to implement this method!");
-        }
-</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <script type="text/javascript" th:src="@{/js/getImage.js}"></script>
 </head>
 
-<form id="imageform1" name="imageform1" th:action="@{/}" th:object="${prompt}" method="get">
-<h1>Imagen API</h1>  <input type="submit" value="Back" onClick="callAPI();" /> 
- <input type="button" value="Save pose image to database" onClick="callAPIOS();" /> 
- <input type="button" value="Upload an image" onClick="callAPIOS();" /> 
-<input id="hiddenstring" class="form-control" type="hidden" th:value="${imagestring}" >
-</form> 
-
-<form id="imageform" name="imageform" >
-<body onLoad="loadImage();">
-<div>
-<img id="poseImage" name="poseImage" width="500" height="500">
+<div id="resultsContainer" class="container">
+    <h1 class="field text-center">
+        <span class="material-symbols-outlined">
+        self_improvement
+        </span>Imagen API
+    </h1>
+    <div class="field btns text-center">
+        <button class="btn" th:onclick="goBack();">
+            <span class="icon-left material-symbols-outlined">
+                undo
+            </span>
+            Back
+        </button>
+        <button class="btn" th:onclick="callAPIOS();">
+            <span class="icon-left material-symbols-outlined">
+                save
+            </span>
+            Save pose image to database
+        </button>
+        <button class="btn" th:onclick="callAPIOS();">
+            <span class="icon-left material-symbols-outlined">
+                upload
+            </span>
+            Upload an image
+        </button>
+    </div>
+    <div id="poseImgContainer" class="field text-center">
+        <img id="poseImage" name="poseImage" width="500" height="500" src="data:image/jpg;base64,${imagestring}">
+    </div>
 </div>
-</body>
 </html>
-
-<!--
-    style="border:1px solid black;"
-<span id="source" style="display:none">
-${imagestring}
-</span> -->
