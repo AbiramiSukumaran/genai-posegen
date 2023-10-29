@@ -13,34 +13,34 @@ body {
   'GRAD' 0,
   'opsz' 24
 }
-.container {
+#formprompt {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.text-center {
-    text-align: center;
-}
-.field {
+#formprompt .field {
     width: 80%;
     max-width: 800px;
     margin: 20px 0;
 }
-.field label {
+#formprompt .submitField {
+    text-align: center;
+}
+#formprompt .field label {
     display: block;
     margin: 0 0 5px;
 }
-.field select,
-.field textarea {
+#formprompt .field select,
+#formprompt .field textarea {
     display: block;
     width: 100%;
     border-radius: 18px;
     padding: 10px;
 }
-.field textarea{
+#formprompt .field textarea{
     resize: vertical;
 }
-.btn{
+#formprompt .submitBtn{
     display: inline-flex;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
@@ -51,14 +51,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-.btn:hover {
+#formprompt .submitBtn:hover {
     box-shadow: 0 0 10px #3e00b8;
 }
-.btn > .icon-right {
+#formprompt .submitBtn > .icon {
     margin-left:10px;
-}
-.btn > .icon-left {
-    margin-right:10px;
 }
 #slider {
     width: 400px;
