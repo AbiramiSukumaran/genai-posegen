@@ -11,7 +11,7 @@
     <script type="text/javascript" th:src="@{/js/index.js}"></script>
 </head>
 <body>
-<form id="formprompt" name="formprompt" action="#" th:action="@{/getimage}" th:object="${prompt}" method="get">
+<form id="formprompt" class="container" name="formprompt" action="#" th:action="@{/getimage}" th:object="${prompt}" method="get">
     <h1>
         <span class="material-symbols-outlined">
         self_improvement
@@ -30,10 +30,10 @@
         <textarea id="promptText" name="promptText"></textarea>
         <input type="hidden" th:field="*{prompt}"  id="hiddenprompt" >
     </div>
-    <div class="field submitField">
-        <button class="submitBtn" th:onclick="callAPI()">
+    <div class="field submitField text-center">
+        <button class="submitBtn btn" th:onclick="callAPI()">
             Generate Image
-            <span class="icon material-symbols-outlined">
+            <span class="icon-right material-symbols-outlined">
                 send
             </span>
         </button>   
