@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <title>Pose Generator</title>
@@ -13,35 +12,42 @@
     <link rel="stylesheet" th:href="@{/css/style.css}" />
     <script type="text/javascript" th:src="@{/js/getImage.js}"></script>
 </head>
-
-<div id="resultsContainer" class="container">
+<body>
+<center>
+<form id="imageform1" name="imageform1" th:action="@{/}" th:object="${prompt}" method="get"></form>
     <h1 class="field text-center">
         <span class="material-symbols-outlined">
         self_improvement
         </span>Imagen API
     </h1>
-    <div class="field btns text-center">
-        <button class="btn" th:onclick="goBack();">
-            <span class="icon-left material-symbols-outlined">
-                undo
-            </span>
+    
+        <button class="submitBtn" th:onclick="goBack();">
+            
             Back
         </button>
-        <button class="btn" th:onclick="callAPIOS();">
-            <span class="icon-left material-symbols-outlined">
-                save
-            </span>
+        <button class="submitBtn" th:onclick="callAPIOS();">
+           
             Save pose image to database
         </button>
-        <button class="btn" th:onclick="callAPIOS();">
-            <span class="icon-left material-symbols-outlined">
-                upload
-            </span>
+        <button class="submitBtn" th:onclick="callAPIOS();">
+           
             Upload an image
         </button>
-    </div>
-    <div id="poseImgContainer" class="field text-center">
-        <img id="poseImage" name="poseImage" width="500" height="500" src="data:image/jpg;base64,${imagestring}">
-    </div>
+ 
+<input id="hiddenstring" class="form-control" type="hidden" th:value="${imagestring}" >
+</form> 
+
+<form id="imageform" name="imageform" >
+<body onLoad="loadImage();">
+<div>
+<img id="poseImage" name="poseImage" width="500" height="500">
 </div>
+</center>
+</body>
 </html>
+
+<!--
+    style="border:1px solid black;"
+<span id="source" style="display:none">
+${imagestring}
+</span> -->
