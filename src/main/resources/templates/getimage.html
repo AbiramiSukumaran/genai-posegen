@@ -12,42 +12,40 @@
     <link rel="stylesheet" th:href="@{/css/style.css}" />
     <script type="text/javascript" th:src="@{/js/getImage.js}"></script>
 </head>
-<body>
-<center>
-<form id="imageform1" name="imageform1" th:action="@{/}" th:object="${prompt}" method="get"></form>
+<body onLoad="loadImage();">
+<form class="text-center" id="imageform1" name="imageform1" th:action="@{/}" th:object="${prompt}" method="get"></form>
     <h1 class="field text-center">
         <span class="material-symbols-outlined">
         self_improvement
         </span>Imagen API
     </h1>
     
-        <button class="submitBtn" th:onclick="goBack();">
-            
+    <div class="field btns text-center">
+        <button class="btn" th:onclick="goBack();">
             Back
+            <span class="icon-left material-symbols-outlined">
+                undo
+            </span>
         </button>
-        <button class="submitBtn" th:onclick="callAPIOS();">
-           
+        <button class="btn" th:onclick="callAPIOS();">
             Save pose image to database
+            <span class="icon-left material-symbols-outlined">
+                save
+            </span>
         </button>
-        <button class="submitBtn" th:onclick="callAPIOS();">
-           
+        <button class="btn" th:onclick="callAPIOS();">
             Upload an image
+            <span class="icon-left material-symbols-outlined">
+                upload
+            </span>
         </button>
- 
-<input id="hiddenstring" class="form-control" type="hidden" th:value="${imagestring}" >
+    </div>
+    <input id="hiddenstring" class="form-control" type="hidden" th:value="${imagestring}" >
 </form> 
 
-<form id="imageform" name="imageform" >
-<body onLoad="loadImage();">
-<div>
+<form id="imageform" name="imageform">
+<div class="text-center">
 <img id="poseImage" name="poseImage" width="500" height="500">
 </div>
-</center>
 </body>
 </html>
-
-<!--
-    style="border:1px solid black;"
-<span id="source" style="display:none">
-${imagestring}
-</span> -->

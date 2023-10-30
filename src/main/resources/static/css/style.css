@@ -40,7 +40,13 @@ body {
 #formprompt .field textarea{
     resize: vertical;
 }
-#formprompt .submitBtn{
+.text-center {
+    text-align: center;
+}
+.btns{
+    margin:20px 0;
+}
+.btn{
     display: inline-flex;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
@@ -51,10 +57,10 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-#formprompt .submitBtn:hover {
+.btn:hover {
     box-shadow: 0 0 10px #3e00b8;
 }
-#formprompt .submitBtn > .icon {
+.btn > .icon {
     margin-left:10px;
 }
 #slider {
