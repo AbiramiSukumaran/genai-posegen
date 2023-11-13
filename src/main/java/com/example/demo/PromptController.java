@@ -130,7 +130,7 @@ public class PromptController {
     }
 
     public String callImagen(String promptRequest){
-      String str = <<You app's application_default_credentials.json>>
+      String str = "You app's application_default_credentials.json";
        
     
         try{
