@@ -72,7 +72,8 @@ import jakarta.xml.bind.DatatypeConverter;
 
 @RestController
 public class PromptController {
-    private static final String get_pose_list = "https://yoga-pose-spanner-uxu5wi2jpa-uc.a.run.app/";
+   // private static final String get_pose_list = "https://yoga-pose-spanner-uxu5wi2jpa-uc.a.run.app/"; //Spanner
+    private static final String get_pose_list = "https://yoga-poses-test-default-rtdb.firebaseio.com/Yoga_Poses.json"; //Firebase
     RestTemplate restTemplate = new RestTemplate();
     private static final Logger logger = Logger.getLogger(PromptController.class.getName());
 
@@ -179,9 +180,9 @@ public class PromptController {
                 String poseString = pose;
                 poseString = poseString.replace("{", "").replace("}", "").replace("\"", "");
                 String[] splitPoseString = poseString.split(",");
-                String name = splitPoseString[1].split(":")[1];
-                String breath = splitPoseString[2].split(":")[1];
-                String desc = splitPoseString[3].split(":")[1];
+                String name = splitPoseString[2].split(":")[1];
+                String breath = splitPoseString[0].split(":")[1];
+                String desc = splitPoseString[1].split(":")[1];
                 poseList.add(name);
             }
         } catch(Exception e){
