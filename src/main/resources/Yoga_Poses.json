@@ -1,0 +1,62 @@
+[
+	{
+	   "Pose_Id": 1,
+	   "Name": "STAND",
+	   "Breath": "INHALE AND EXHALE",
+	   "Description": "STAND WITH YOUR FEET HIP WIDTH APART AND ARMS RESTING BY THE SIDES"
+	 },
+	 {
+	   "Pose_Id": 2,
+	   "Name": "PLANK",
+	   "Breath": "INHALE OR EXHALE",
+	   "Description": "PLANT YOUR TOES AND PALMS ON THE MAT WITH BODY PARALLEL TO THE GROUND"
+	 },
+	 {
+	   "Pose_Id": 3,
+	   "Name": "SIT",
+	   "Breath": "INHALE AND EXHALE",
+	   "Description": "SIT ON THE FLOOR LEGS CROSSED"
+	 },
+	 {
+	   "Pose_Id": 4,
+	   "Name": "BEND",
+	   "Breath": "EXHALE",
+	   "Description": "FOLD FORWARD AS YOU STAND HANDS REACHING TO THE FLOOR"
+	 },
+	 {
+	   "Pose_Id": 5,
+	   "Name": "PUSH UP",
+	   "Breath": "EXHALE",
+	   "Description": "PLANK WITH ELBOWS ON MAT"
+	 },
+	 {
+	   "Pose_Id": 6,
+	   "Name": "SEATED FORWARD BEND",
+	   "Breath": "EXHALE",
+	   "Description": "FOLD FORWARD AS YOU SIT HANDS TRYING TO REACH THE FEET"
+	 },
+	 {
+	   "Pose_Id": 7,
+	   "Name": "LUNGE",
+	   "Breath": "EXHALE",
+	   "Description": "ONE LEG TO THE FRONT 90 DEGREES TO THE FLOOR AND THE BACK LEG STRAIGHT"
+	 },
+	 {
+	   "Pose_Id": 8,
+	   "Name": "COURTESY LUNGE",
+	   "Breath": "INHALE",
+	   "Description": "ONE LEG TO THE FRONT 90 DEGREES TO THE FLOOR AND THE BACK KNEE TOUCHING THE FLOOR"
+	 },
+	 {
+	   "Pose_Id": 9,
+	   "Name": "BANK BEND",
+	   "Breath": "INHALE",
+	   "Description": "STAND WITH ARMS UP AND BODY BENT BACKWARDS ARCHING YOUR SPINE LOOKING AT THE SKY"
+	 },
+	 {
+	   "Pose_Id": 10,
+	   "Name": "BICEP ACTION",
+	   "Breath": "INHALE AND EXHALE",
+	   "Description": "CURL PRESS AND WORK YOUR BICEPS"
+	 }
+]
